@@ -1,0 +1,34 @@
+# Python
+*.pyc
+__pycache__/
+venv/
+*.pyo
+*.pyd
+*.pyi
+*.pyz
+*.pyw
+*.pyz/
+*.pyw/
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and Temporary Files
+*.log
+*.bak
+*.swp
+*.tmp
+*.temp
+*.out
+
+# Dependency Management
+pip-lock.txt
+pipenv.lock
