@@ -152,4 +152,4 @@ print("[Scikit-Learn] Hinge loss:   {0:.3f}".format(loss_sklearn))
 
 # the two models should give the same Hinge loss
 
-print('done----->') 
+print('<<<<<<<End of Line>>>>>>>') 
