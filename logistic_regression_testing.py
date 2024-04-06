@@ -25,7 +25,7 @@ churn_df = churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equi
 churn_df['churn'] = churn_df['churn'].astype('int')
 print(churn_df.head())
 
-print('practice ----->')
+print('view ----->')
 print(churn_df.shape)
 
 print('normalize the data set----->')
@@ -49,11 +49,13 @@ print(LR)
 
 print('predicting with test set X_test----->')
 yhat = LR.predict(X_test)
+print("prediction: ")
 print(yhat)
 
 #predict_proba returns estimates for all classes, ordered by the label of classes. So, the first column is the probability of class 0, P(Y=0|X), and second column is probability of class 1, P(Y=1|X):
 
 yhat_prob = LR.predict_proba(X_test)
+print('prediction probability: ')
 print(yhat_prob)
 
 print('Evaluation----->')
@@ -83,6 +85,7 @@ def plot_confusion_matrix(cm, classes,
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
+    plt.legend()
     tick_marks = np.arange(len(classes))
     plt.xticks(tick_marks, classes, rotation=45)
     plt.yticks(tick_marks, classes)
@@ -97,6 +100,8 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
+    plt.title('Confusion matrix')
+    plt.legend()
 print(confusion_matrix(y_test, yhat, labels=[1,0]))
 
 print('Computing confusion matrix')
